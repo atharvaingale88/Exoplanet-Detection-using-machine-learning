@@ -73,7 +73,7 @@ jupyter notebook
 
 #### 3. Run `exoplanet_classifier.ipynb`  
 
-- Loads `final_df.csv` and performs EDA (e.g., histograms, correlation plots).   
+- Loads `final_df.csv` and performs EDA (e.g., histograms, correlation plots).  
 - Preprocesses data (imputation, scaling, encoding).  
 - Trains and evaluates models; saves `fitted.joblib` abd `model.joblib`.  
 - Predicts on candidates and saves `candidates_predictions.csv` with probabilities.  
