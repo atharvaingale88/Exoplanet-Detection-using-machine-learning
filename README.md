@@ -1,8 +1,8 @@
 # Overview
 This project focuses on detecting exoplanets using data from NASA's Kepler mission. It involves:
 
-## `1. Data Acquisition and Preprocessing`: Querying the NASA Exoplanet Archive for Kepler Objects of Interest (KOIs), confirmed planet names, and planetary system parameters. The data is merged, cleaned, and prepared for machine learning.
-## `2. Exoplanet Classification`: Building and evaluating machine learning models to classify KOIs as confirmed exoplanets, false positives, or candidates. A stacking classifier is used for optimal performance, with predictions applied to unresolved candidates.
+- `1. Data Acquisition and Preprocessing`: Querying the NASA Exoplanet Archive for Kepler Objects of Interest (KOIs), confirmed planet names, and planetary system parameters. The data is merged, cleaned, and prepared for machine learning.
+- `2. Exoplanet Classification`: Building and evaluating machine learning models to classify KOIs as confirmed exoplanets, false positives, or candidates. A stacking classifier is used for optimal performance, with predictions applied to unresolved candidates.
 
 The dataset includes ~8,000 KOIs with features like orbital period, transit depth, stellar temperature, and more. The classifier achieves high accuracy (~0.93+ on test sets) in distinguishing confirmed planets from false positives.
 This is a complete end-to-end pipeline for exoplanet detection, suitable for astronomy enthusiasts, students, or researchers exploring transit photometry data.
@@ -15,20 +15,20 @@ Features
 - `Candidate Prediction`: Applies the trained model to unresolved candidates and outputs predictions with probabilities.
 
 # Project Structure
-- Exoplanet-Detection-using-machine-learning/
-- ├── README.md                 # This file
-├── data/                     # Output directory for datasets (created during runtime)
-│   ├── kepler_objects_of_interset(kois).csv
-│   ├── kepler_confirmed_planet_names.csv
-│   ├── planetory_systems.csv
-│   ├── final_df.csv
-├── download_koi_data.ipynb     # Data download, merging, and preprocessing
-├── exoplanet_classifier.ipynb  # EDA, modeling, and prediction
-├── fitted.joblib               # All trained models
-├── metrics.csv                 # Score and Optimization time of each model
-├── model.joblib                # Trained best performing model
-├── candidates_predictions.csv  # Generated predictions
-└── requirements.txt            # Dependencies
+Exoplanet-Detection-using-machine-learning/  
+├── README.md                 # This file  
+├── data/                     # Output directory for datasets (created during runtime)  
+│   ├── kepler_objects_of_interset(kois).csv  
+│   ├── kepler_confirmed_planet_names.csv  
+│   ├── planetory_systems.csv  
+│   ├── final_df.csv  
+├── download_koi_data.ipynb     # Data download, merging, and preprocessing  
+├── exoplanet_classifier.ipynb  # EDA, modeling, and prediction  
+├── fitted.joblib               # All trained models  
+├── metrics.csv                 # Score and Optimization time of each model  
+├── model.joblib                # Trained best performing model  
+├── candidates_predictions.csv  # Generated predictions  
+└── requirements.txt            # Dependencies  
 
 # Installation
 
@@ -70,11 +70,13 @@ jupyter notebook
 
 # Results
 
-## Model Performance (Stacking Classifier)
+### Model Performance (Stacking Classifier)
 
-Accuracy: 0.9385898407884761, F1-Score: 0.927484333034915 ROC-AUC: 0.9765751518519046
+Accuracy: 0.9385898407884761  
+F1-Score: 0.927484333034915  
+ROC-AUC: 0.9765751518519046  
 
-## Candidate Predictions
+### Candidate Predictions
 
 - From 1,349 candidates: 759 predicted false positives (56.26%), 590 potential exoplanets (44.74%).
 - High-confidence predictions (>0.9 prob) can guide follow-up observations.
