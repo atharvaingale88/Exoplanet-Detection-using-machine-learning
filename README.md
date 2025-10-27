@@ -36,12 +36,12 @@ Exoplanet-Detection-using-machine-learning/
 
 ## Installation  
 
-### 1. Clone the Repositor:  
+### 1. Clone the Repository  
 
-- git clone https://github.com/atharvaingale88/Exoplanet-Detection-using-machine-learning.git  
+- git clone <https://github.com/atharvaingale88/Exoplanet-Detection-using-machine-learning.git>  
 - cd Exoplanet-Detection-using-machine-learning  
 
-### 2. Create a Virtual Environment (recommended):  
+### 2. Create a Virtual Environment (recommended)  
 
 #### Using conda (as in the notebooks)  
 
@@ -53,25 +53,25 @@ Exoplanet-Detection-using-machine-learning/
 - python -m venv exoplanet_detection_env  
 - source exoplanet_detection_env/bin/activate  # On Windows: exoplanet_detection_env\Scripts\activate  
 
-### 3. Install Dependencies:  
+### 3. Install Dependencies  
 
 pip install -r requirements.txt  
 
 ## Usage  
 
-### Run the notebooks in sequence using Jupyter:  
+### Run the notebooks in sequence using Jupyter  
 
-#### 1. Start Jupyter:  
+#### 1. Start Jupyter  
 
 jupyter notebook  
 
-#### 2. Run `download_koi_data.ipynb`:  
+#### 2. Run `download_koi_data.ipynb`  
 
 - Queries NASA Exoplanet Archive (requires internet).  
 - Outputs cleaned `final_df.csv` (~8K rows, 50 columns).  
 - Filters to confirmed planets and false positives; handles candidates separately.  
 
-#### 3. Run `exoplanet_classifier.ipynb`:  
+#### 3. Run `exoplanet_classifier.ipynb`  
 
 - Loads `final_df.csv` and performs EDA (e.g., histograms, correlation plots).   
 - Preprocesses data (imputation, scaling, encoding).  
