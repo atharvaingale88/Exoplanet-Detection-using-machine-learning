@@ -11,8 +11,8 @@ process_quarter's_scripts_and_download_lightcurves.ipynb
 
 data/lightcurves/
 data/quarters/
-data/kepid_list.txt
-data/kepids_with_quarters.txt
-data/ordered_kepids.txt
-data/unique_kepids.txt
+data/kepid_list.csv
+data/kepids_with_quarters.csv
+data/ordered_kepids.csv
+data/unique_kepids.csv
 data/*.sh
