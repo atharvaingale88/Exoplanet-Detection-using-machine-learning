@@ -1,4 +1,6 @@
-# Overview
+# Exoplanet Detection using machine learning
+
+## Overview 
 This project focuses on detecting exoplanets using data from NASA's Kepler mission. It involves:
 
 - `1. Data Acquisition and Preprocessing`: Querying the NASA Exoplanet Archive for Kepler Objects of Interest (KOIs), confirmed planet names, and planetary system parameters. The data is merged, cleaned, and prepared for machine learning.
@@ -14,7 +16,7 @@ Features
 - `Model Evaluation`: Cross-validation, SHAP explanations, and hyperparameter tuning via Bayesian optimization.
 - `Candidate Prediction`: Applies the trained model to unresolved candidates and outputs predictions with probabilities.
 
-# Project Structure
+## Project Structure 
 Exoplanet-Detection-using-machine-learning/  
 ├── README.md                 # This file  
 ├── data/                     # Output directory for datasets (created during runtime)  
@@ -30,47 +32,46 @@ Exoplanet-Detection-using-machine-learning/
 ├── candidates_predictions.csv  # Generated predictions  
 └── requirements.txt            # Dependencies  
 
-# Installation
+## Installation 
 
-## 1. Clone the Repositor`:
+### 1. Clone the Repositor: 
 - git clone https://github.com/atharvaingale88/Exoplanet-Detection-using-machine-learning.git
-- cd Exoplanet-Detection-using-machine-learning
+- cd Exoplanet-Detection-using-machine-learning 
 
-## 2. Create a Virtual Environment (recommended):
-### Using conda (as in the notebooks)
-- conda create -n exoplanet_detection_env
-- conda activate exoplanet_detection_env
+### 2. Create a Virtual Environment (recommended): 
+#### Using conda (as in the notebooks) 
+- conda create -n exoplanet_detection_env 
+- conda activate exoplanet_detection_env 
 
-### Or using venv
-- python -m venv exoplanet_detection_env
-- source exoplanet_detection_env/bin/activate  # On Windows: exoplanet_detection_env\Scripts\activate
+#### Or using venv 
+- python -m venv exoplanet_detection_env 
+- source exoplanet_detection_env/bin/activate  # On Windows: exoplanet_detection_env\Scripts\activate 
 
-## 3. Install Dependencies:
-pip install -r requirements.txt
+### 3. Install Dependencies: 
+pip install -r requirements.txt 
 
-# Usage
-## Run the notebooks in sequence using Jupyter:
+## Usage 
+### Run the notebooks in sequence using Jupyter: 
 
-### 1. Start Jupyter:
-jupyter notebook
+#### 1. Start Jupyter: 
+jupyter notebook 
 
-### 2. Run `download_koi_data.ipynb`:
+#### 2. Run `download_koi_data.ipynb`: 
 
-- Queries NASA Exoplanet Archive (requires internet).
-- Outputs cleaned `final_df.csv` (~8K rows, 50 columns).
-- Filters to confirmed planets and false positives; handles candidates separately.
+- Queries NASA Exoplanet Archive (requires internet). 
+- Outputs cleaned `final_df.csv` (~8K rows, 50 columns). 
+- Filters to confirmed planets and false positives; handles candidates separately. 
 
+#### 3. Run `exoplanet_classifier.ipynb`: 
 
-### 3. Run `exoplanet_classifier.ipynb`:
+- Loads `final_df.csv` and performs EDA (e.g., histograms, correlation plots). 
+- Preprocesses data (imputation, scaling, encoding). 
+- Trains and evaluates models; saves `fitted.joblib` abd `model.joblib`. 
+- Predicts on candidates and saves `candidates_predictions.csv` with probabilities. 
 
-- Loads `final_df.csv` and performs EDA (e.g., histograms, correlation plots).
-- Preprocesses data (imputation, scaling, encoding).
-- Trains and evaluates models; saves `fitted.joblib` abd `model.joblib`.
-- Predicts on candidates and saves `candidates_predictions.csv` with probabilities.
+## Results 
 
-# Results
-
-### Model Performance (Stacking Classifier)
+### Model Performance (Stacking Classifier) 
 
 Accuracy: 0.9385898407884761  
 F1-Score: 0.927484333034915  
@@ -78,17 +79,17 @@ ROC-AUC: 0.9765751518519046
 
 ### Candidate Predictions
 
-- From 1,349 candidates: 759 predicted false positives (56.26%), 590 potential exoplanets (44.74%).
-- High-confidence predictions (>0.9 prob) can guide follow-up observations.
+- From 1,349 candidates: 759 predicted false positives (56.26%), 590 potential exoplanets (44.74%). 
+- High-confidence predictions (>0.9 prob) can guide follow-up observations. 
 
-# Limitations & Future Work
+## Limitations & Future Work 
 
 - `Data Scope`: Limited to Kepler transit data; extend to TESS or radial velocity methods.
 - `Imbalanced Classes`: Handled via stratification, but synthetic oversampling (e.g., SMOTE) could improve.
 - `Hyperparameters`: Bayesian search used; grid search for deeper tuning.
 - `Deployment`: Wrap in a Streamlit app for interactive predictions.
 
-# Acknowledgments
+## Acknowledgments
 
-- NASA Exoplanet Archive for public data.
-- scikit-learn, XGBoost, LightGBM, CatBoost, and SHAP for ML tools.
+- NASA Exoplanet Archive for public data. 
+- scikit-learn, XGBoost, LightGBM, CatBoost, and SHAP for ML tools. 
