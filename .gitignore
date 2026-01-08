@@ -5,14 +5,3 @@ cache/
 catboost_info/
 
 logs/
-
-exoplanet_detection_using_lightcurve.ipynb
-process_quarter's_scripts_and_download_lightcurves.ipynb
-
-data/lightcurves/
-data/quarters/
-data/kepid_list.csv
-data/kepids_with_quarters.csv
-data/ordered_kepids.csv
-data/unique_kepids.csv
-data/*.sh
